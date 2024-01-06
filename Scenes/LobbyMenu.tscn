@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cojysv75g6t2y"]
+
+[ext_resource type="Script" path="res://Scripts/LobbyMenu.gd" id="1_1tnwo"]
+
+[node name="LobbyMenu" type="Node"]
+script = ExtResource("1_1tnwo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.839216, 0.482353, 0.380392, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -117.0
+offset_right = 50.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Leave lobby"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
